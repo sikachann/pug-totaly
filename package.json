@@ -15,15 +15,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Riku-Izumoto/pj_poston.git"
+		"url": "git+https://github.com/Fu-taKagawa/pug-template.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Riku-Izumoto/pj_poston/issues"
-	},
-	"homepage": "https://github.com/Riku-Izumoto/pj_poston#readme",
 	"devDependencies": {
 		"autoprefixer": "^9.6.1",
 		"browser-sync": "^2.26.7",
