@@ -1,0 +1,31 @@
+.category {
+  background-color: #{$black};
+  border-radius: 25px;
+  padding: 10px 0;
+  color: #{$white};
+  width: 150px;
+  text-align: center;
+  @include pc {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+  }
+
+  @include sp {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+  }
+}
+
+.tag {
+  padding: 3px 0;
+  border-radius: 25px;
+  width: 100px;
+  text-align: center;
+  background-color: #{$black};
+  color: #{$white};
+  @include pc {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+  }
+
+  @include sp {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+  }
+}

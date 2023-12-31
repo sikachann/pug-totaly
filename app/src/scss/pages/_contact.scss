@@ -1,0 +1,55 @@
+.contact {
+	@include pc {
+		margin: 80px 0;
+	}
+	@include sp {
+		margin: 40px 0;
+	}
+	&__form {
+		margin: auto;
+		@include pc {
+			width: 60vw;
+		}
+		@include sp {
+			width: 80%;
+		}
+		&__item {
+			display: grid;
+			margin: 0 auto 30px;
+			.label {
+				margin-bottom: 10px;
+			}
+			.input {
+				padding: 5px 0 5px 10px;
+				width: 100%;
+				border-radius: 5px;
+				background-color: #{$gray};
+			}
+			.textarea {
+				width: 100%;
+				padding: 10px 15px;
+				border-radius: 5px;
+				background-color: #{$gray};
+			}
+		}
+		.checkbox {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: inherit;
+			margin: 0 auto 45px;
+			.text-bold {
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 0;
+			}
+			input {
+				width: fit-content;
+				margin-right: 10px;
+			}
+			a {
+				border-bottom: solid 1px #{$black};
+			}
+		}
+	}
+}

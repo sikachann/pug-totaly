@@ -1,0 +1,14 @@
+$BREAKPOINT_PC: 960px;
+$BREAKPOINT_SP: 959px;
+
+@mixin sp {
+  @media ( max-width: ($BREAKPOINT_SP) ) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media ( min-width: ($BREAKPOINT_PC) ) {
+    @content;
+  }
+}

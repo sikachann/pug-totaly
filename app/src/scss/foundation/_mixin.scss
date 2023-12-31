@@ -1,0 +1,85 @@
+@function calcRem($size) {
+	@return ($size / 16px) * 1rem;
+}
+
+@mixin letterSpacing($fontSize, $value) {
+	letter-spacing: calc(#{$fontSize} * 0.001 * #{$value});
+}
+
+@mixin defaultTransition() {
+	transition: all 0.2s ease-out;
+}
+
+@mixin font(
+	$fontSize: 1rem,
+	$weight: 400,
+	$style: normal,
+	$kerning: 0,
+	$lineheight: 1.75
+) {
+	font-size: $fontSize;
+	font-weight: $weight;
+	font-style: $style;
+	line-height: $lineheight;
+	@include letterSpacing($fontSize, $kerning);
+}
+
+@mixin notosan-normal {
+	font-family: "Noto-sansJP", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin notosan-bold {
+	font-family: "Noto-sansJP", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin montserrat-normal {
+	font-family: "montserrat", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin montserrat-bold {
+	font-family: "montserrat", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin Poppins-light {
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+@mixin Poppins-normall {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin Poppins-bold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin futura-normal {
+	font-family: "futura-pt, sans-serif";
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin futura-bold {
+	font-family: "futura-pt-boldold, sans-serif";
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin midashi-go {
+	font-family: "a-otf-normalidashi-go-normalb31-pr6n", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}

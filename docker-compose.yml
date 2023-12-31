@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    container_name: web-templates
+    image: nginx:1.17.8-alpine
+    ports:
+      - 8100:8100
+    volumes:
+      - ./docker/web/default.conf:/etc/nginx/conf.d/default.conf
+      - ./app:/var/www/html
+    depends_on:
+      - node
+
+  node:
+    container_name: node-templates
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    tty: true
+    stdin_open: true
+
+volumes:
+  node_modules:

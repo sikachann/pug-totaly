@@ -1,0 +1,160 @@
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium"), local("YuGothic-Medium");
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Bold"), local("YuGothic-Bold");
+	font-weight: bold;
+}
+// 共通
+
+::-moz-selection {
+	background: #{$black};
+	color: #{$white};
+}
+
+::selection {
+	background: #{$black};
+	color: #{$white};
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #000;
+	font-family: "Noto-sansJP", "YuGothic", "Yu Gothic", "Helvetica Neue", Arial,
+		"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+	font-feature-settings: "palt";
+	-webkit-font-smoothing: antialiased;
+	font-kerning: normal;
+	position: relative;
+	hyphens: auto;
+	line-break: strict;
+	background: #{$white};
+	@include font(
+		$fontSize: 15px,
+		$weight: 400,
+		$style: normal,
+		$kerning: 50,
+		$lineheight: 1.75
+	);
+	position: relative;
+}
+
+#canvas {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	background: #{$white};
+	transition: opacity 0.3s ease-out;
+
+	@include sp {
+		opacity: 0.05;
+	}
+
+	@include pc {
+		opacity: 0.05;
+	}
+
+	&.is-active {
+		@include sp {
+			opacity: 0.3;
+		}
+
+		@include pc {
+			opacity: 0.3;
+		}
+	}
+}
+
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	*zoom: 1;
+}
+
+.hide {
+	display: none !important;
+}
+
+.section {
+	margin: 50px auto;
+}
+
+.pc-only {
+	@include sp {
+		display: none !important;
+	}
+
+	@include pc {
+		display: inline;
+	}
+}
+
+.sp-only {
+	@include sp {
+		display: inline;
+	}
+
+	@include pc {
+		display: none !important;
+	}
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	@include sp {
+		width: calc(100% - 50px);
+	}
+	@include pc {
+		min-width: 870px;
+		width: 90%;
+		max-width: 1240px;
+	}
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: #{$black};
+}
+
+.vertical {
+	width: 1px;
+	height: 18px;
+	background-color: #{$black};
+}
+
+.w-100 {
+	width: 100% !important;
+}

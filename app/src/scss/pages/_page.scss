@@ -1,0 +1,14 @@
+.page {
+	@include pc {
+		padding-top: 10vh;
+	}
+	@include sp {
+		padding-top: 12vh;
+		margin-bottom: 50px;
+	}
+
+	&__here {
+		width: 90%;
+		margin-left: auto;
+	}
+}

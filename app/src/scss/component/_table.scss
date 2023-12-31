@@ -1,0 +1,130 @@
+.table {
+	width: 100%;
+	tr {
+		display: flex;
+		@include sp {
+			flex-wrap: wrap;
+		}
+	}
+	th,
+	td {
+		@include sp {
+			padding: 20px 0;
+		}
+		@include pc {
+			padding: 30px 0;
+			width: 100%;
+		}
+	}
+	th {
+		color: #{$black};
+		border-top: 1px solid #e2e2e2;
+		@include sp {
+			width: 80px;
+			@include font(
+				$fontSize: 13px,
+				$weight: 600,
+				$style: normal,
+				$kerning: 75,
+				$lineheight: 1.75
+			);
+		}
+		@include pc {
+			width: 180px;
+			@include font(
+				$fontSize: 14px,
+				$weight: 600,
+				$style: normal,
+				$kerning: 75,
+				$lineheight: 1.75
+			);
+		}
+	}
+	td {
+		border-top: 1px solid #e2e2e2;
+		@include sp {
+			width: calc(100% - 80px);
+			padding-left: 10px;
+			@include font(
+				$fontSize: 13px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 75,
+				$lineheight: 1.75
+			);
+		}
+		@include pc {
+			width: calc(100% - 180px);
+			padding-left: 30px;
+			@include font(
+				$fontSize: 14px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 75,
+				$lineheight: 1.75
+			);
+		}
+	}
+	dl {
+		display: flex;
+		@include sp {
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+		}
+		@include pc {
+			margin-bottom: 5px;
+		}
+		&:last-child {
+			margin: 0;
+		}
+	}
+	dt {
+		@include sp {
+			width: 100px;
+			@include font(
+				$fontSize: 13px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 0,
+				$lineheight: 1.75
+			);
+		}
+		@include pc {
+			width: 150px;
+			@include font(
+				$fontSize: 14px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 0,
+				$lineheight: 1.75
+			);
+		}
+	}
+	dd {
+		margin: 0;
+		@include sp {
+			width: 100%;
+			@include font(
+				$fontSize: 13px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 0,
+				$lineheight: 1.75
+			);
+		}
+		@include pc {
+			width: calc(100% - 150px);
+			@include font(
+				$fontSize: 14px,
+				$weight: 400,
+				$style: normal,
+				$kerning: 0,
+				$lineheight: 1.75
+			);
+		}
+	}
+	a {
+		color: #{$black};
+		text-decoration: underline;
+	}
+}

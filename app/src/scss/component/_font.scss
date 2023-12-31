@@ -1,0 +1,31 @@
+.poppins-light {
+	@include Poppins-light;
+}
+
+.poppins-normall {
+	@include Poppins-normall;
+}
+
+.poppins-bold {
+	@include Poppins-bold;
+}
+
+.midashi-go {
+	@include midashi-go;
+}
+
+.futura-normal {
+	@include futura-normal;
+}
+
+.futura-bold {
+	@include futura-bold;
+}
+
+.montserrat-normal {
+	@include montserrat-normal;
+}
+
+.montserrat-bold {
+	@include montserrat-bold;
+}

@@ -1,0 +1,45 @@
+
+@keyframes pageScroll {
+  0% {
+    transform: rotate(90deg) scaleX(1);
+  }
+  100% {
+    transform: rotate(90deg) scaleX(0);
+  }
+}
+
+@keyframes titleAnimationIndex {
+    0% {
+      transform: translate3d(0, 50px, 0);
+      opacity: 0;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+  }
+}
+
+@keyframes revealLTR {
+  0%{
+    width: 100%;
+    left: 0;
+  }
+  25%{
+    width: 100%;
+    left: 0;
+  }
+  85% {
+    width: 0;
+    left: 100%;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes border-animation {
+  to { transform: rotate(360deg); }
+}
