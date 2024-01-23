@@ -1,4 +1,5 @@
 .header {
+	//headerを下にした時にも追従するためにposition:fixedを入れてる 
 	position: fixed;
 	display: flex;
 	align-items: center;
@@ -11,6 +12,8 @@
 		z-index: 1000;
 		background-color: #{$white};
 		height: 55px;
+		top: 0;
+		flex-direction: column
 	}
 	@include sp {
 		top: 20px;

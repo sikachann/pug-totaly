@@ -19,7 +19,80 @@ html(lang="ja")
   body
     include ./include/_header
     main
-      .page
-      .tag hoge
+    .twocolm
+      .twocolm_container 
+        .twocolm_container_left 
+          img(src="path+img/page/item.jpg", alt="服写真")
+        .twocolm_container_rignt 
+          .container_top 
+            p TOTALLY Short Sleeve Shirt 
+          .container_p 
+            .container_txt 
+              p テキストテキストテキストテキストテキストテキストテキスト
+                <br>テキストテキストテキストテキストテキストテキストテキスト
+                <br>テキストテキストテキストテキストテキストテキストテキスト
+                <br>テキストテキストテキストテキストテキストテキストテキスト
+                <br>テキストテキストテキストテキストテキストテキストテキスト
+                <br>テキストテキストテキスト
+            .container_money 
+              p ￥9,999*tax
+          .container_table 
+            tr
+              th#color Color
+              th#size Size 
+              th#quantity  
+            tr
+              td White
+              td s
+              td 
+                select(name="quantity_s" size="5")
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+            tr
+              td White
+              td M 
+              td 
+                select(name="quantity_m" size="5")
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+            tr
+              td White
+              td L 
+              td 
+                select(name="quantity_l" size="5")
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+          .container_submit 
+            input(type="submit", value="ADD TO CART")
+          
+          .container_sizetable 
+            tr 
+              th#chest  Chest 
+              th#weist  Weist
+              th#height  Height 
+            tr 
+              td S 
+              td 99~99
+              td 99~99
+              td 99~99
+            tr 
+              td M 
+              td 99~99
+              td 99~99
+              td 99~99
+            tr 
+              td L 
+              td 99~99
+              td 99~99
+              td 99~99
     include ./include/_footer
     include ./include/_script

@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web:
-    container_name: web-templates
+    container_name: web-totaly1
     image: nginx:1.17.8-alpine
     ports:
       - 8100:8100
@@ -13,7 +13,7 @@ services:
       - node
 
   node:
-    container_name: node-templates
+    container_name: node-totaly1
     build:
       context: .
       dockerfile: ./docker/node/Dockerfile

@@ -1,0 +1,42 @@
+main{
+    margin-top: 55px;
+}
+.header{
+    &_top{
+        text-align: center;
+    }
+    &_inf{
+        display: flex;
+        width: 100%;
+        justify-content:  space-between
+    } 
+    &_list{
+        display: flex;
+    }
+    &_toggler{
+        display: flex;
+    }
+}
+.twocolm{
+    &_container{
+        display: flex;
+    }
+}
+
+.conthainer{
+    &_table th{
+        border-top: 1px;
+    }
+
+}
+
+
+
+.footer{
+    &__content__logo{
+        justify-content: center;
+    }
+    &__content__logo img{
+        width: 70px;
+    }
+}
